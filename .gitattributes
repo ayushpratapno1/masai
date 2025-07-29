@@ -1,0 +1,41 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto
+
+# Explicitly declare text files with LF endings
+*.html text
+*.css text
+*.js text
+*.md text
+*.yml text
+*.yaml text
+
+# Declare binary files (Git won't modify line endings)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.ico binary
+
+# Minified files should be treated as binary
+*.min.js binary
+*.min.css binary
+
+# Files that should always use LF line endings
+.gitattributes text eol=lf
+.editorconfig text eol=lf
+
+# Files that should always use CRLF line endings (Windows-specific)
+*.bat text eol=crlf
+
+# Prevent unexpected diffs in lock files
+package-lock.json -diff
+yarn.lock -diff
+
+# Mark generated files
+/dist/ export-ignore
+/node_modules/ export-ignore
