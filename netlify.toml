@@ -1,0 +1,11 @@
+[build]
+  publish = "src"
+  
+[build.environment]
+  NODE_VERSION = "18"
+
+# Ensure proper routing for single-page behavior
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
