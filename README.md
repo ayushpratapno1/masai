@@ -13,13 +13,16 @@ aws-static-website-portfolio/
 │   └── cloudformation.yml      # AWS deployment template
 ├── src/                        # Website source files
 │   ├── index.html              # Main page
+│   └── static/                 # Static assets folder
+│       ├── style.css           # Main stylesheet
+│       └── script.js           # JavaScript functionality
 ├── analytics/                  # Usage analytics
 │   ├── coremetrics.md          # Key performance metrics
-|   |__ growthstrategy.md       # Growth Strategy Used
+│   ├── growthstrategy.md       # Growth Strategy Used
 │   ├── user_demographics.md    # User statistics
 │   ├── traffic_sources.md      # Traffic channels
 │   └── performance_insights.md # Optimization notes
-│__ .gitattributes              # Git configuration
+├── .gitattributes              # Git configuration
 └── README.md                   # Project overview
 ```
 
