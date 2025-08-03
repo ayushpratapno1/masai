@@ -184,9 +184,9 @@ function initLoadingAnimations() {
     const title = document.querySelector('h1');
     const subtitle = document.querySelector('.subtitle');
     
-    if (title) {
-      title.style.animation = 'titleEntrance 1s cubic-bezier(0.4, 0, 0.2, 1)';
-    }
+          if (title) {
+        title.style.animation = 'titleEntrance 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), colorShift 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 2s, textGlow 5s ease-in-out infinite alternate 2s';
+      }
     if (subtitle) {
       subtitle.style.animation = 'subtitleEntrance 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both';
     }

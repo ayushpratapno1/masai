@@ -175,12 +175,47 @@
     }
     h1 {
       font-size: clamp(2.5rem,5vw,3.5rem);
-      background: linear-gradient(90deg, var(--accent), var(--light));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
+      background: linear-gradient(90deg, var(--accent), var(--light), var(--primary), var(--secondary), var(--accent));
+      background-size: 400% 400%;
+      -webkit-background-clip: text; 
+      background-clip: text; 
+      color: transparent;
       text-shadow: 0 0 30px rgba(240,147,251,0.5);
-      font-weight: 800; margin-bottom: 15px;
-      animation: textGlow 3s ease-in-out infinite alternate;
+      font-weight: 800; 
+      margin-bottom: 15px;
+      animation: colorShift 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite, textGlow 5s ease-in-out infinite alternate;
     }
+    
+    @keyframes colorShift {
+      0% { 
+        background-position: 0% 50%;
+      }
+      12.5% {
+        background-position: 25% 50%;
+      }
+      25% { 
+        background-position: 50% 50%;
+      }
+      37.5% {
+        background-position: 75% 50%;
+      }
+      50% { 
+        background-position: 100% 50%;
+      }
+      62.5% {
+        background-position: 75% 50%;
+      }
+      75% { 
+        background-position: 50% 50%;
+      }
+      87.5% {
+        background-position: 25% 50%;
+      }
+      100% { 
+        background-position: 0% 50%;
+      }
+    }
+    
     @keyframes textGlow {
       0% { text-shadow: 0 0 20px rgba(240,147,251,0.5); }
       100% { text-shadow: 0 0 40px rgba(102,126,234,0.8); }
